@@ -1,1 +1,2 @@
-print("Python")
+print("education")
+# new string
