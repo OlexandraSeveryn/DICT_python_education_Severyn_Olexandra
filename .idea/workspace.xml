@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b64cba5a-2fc0-449a-9afb-a7a2e8647c6c" name="Changes" comment="hangman 5-th stage">
+    <list default="true" id="b64cba5a-2fc0-449a-9afb-a7a2e8647c6c" name="Changes" comment="hangman 6-th stage">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hangout/hangman.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hangout/hangman.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -136,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638919424014</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="hangman 6-th stage">
+      <created>1638920442312</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1638920442312</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -157,6 +165,7 @@
     <MESSAGE value="hangman 3-rd stage" />
     <MESSAGE value="hangman 4-th stage" />
     <MESSAGE value="hangman 5-th stage" />
-    <option name="LAST_COMMIT_MESSAGE" value="hangman 5-th stage" />
+    <MESSAGE value="hangman 6-th stage" />
+    <option name="LAST_COMMIT_MESSAGE" value="hangman 6-th stage" />
   </component>
 </project>
