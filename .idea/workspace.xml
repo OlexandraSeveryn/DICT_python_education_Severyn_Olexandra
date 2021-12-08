@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b64cba5a-2fc0-449a-9afb-a7a2e8647c6c" name="Changes" comment="create file">
+    <list default="true" id="b64cba5a-2fc0-449a-9afb-a7a2e8647c6c" name="Changes" comment="CoffeeMachine 3-rd stage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CoffeeMachine/coffeemachine.py" beforeDir="false" afterPath="$PROJECT_DIR$/CoffeeMachine/coffeemachine.py" afterDir="false" />
     </list>
@@ -208,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638993053690</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="CoffeeMachine 2-nd stage">
+      <created>1638993867653</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1638993867653</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -233,6 +240,7 @@
     <MESSAGE value="hangman 7-th stage" />
     <MESSAGE value="hangman 8-th stage" />
     <MESSAGE value="create file" />
-    <option name="LAST_COMMIT_MESSAGE" value="create file" />
+    <MESSAGE value="CoffeeMachine 2-nd stage" />
+    <option name="LAST_COMMIT_MESSAGE" value="CoffeeMachine 2-nd stage" />
   </component>
 </project>
