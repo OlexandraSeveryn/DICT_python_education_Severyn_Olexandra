@@ -222,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638997920751</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="CoffeeMachine 4-th stage">
+      <created>1639509538536</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1639509538536</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,6 +256,7 @@
     <MESSAGE value="create file" />
     <MESSAGE value="CoffeeMachine 2-nd stage" />
     <MESSAGE value="CoffeeMachine 3-rd stage" />
-    <option name="LAST_COMMIT_MESSAGE" value="CoffeeMachine 3-rd stage" />
+    <MESSAGE value="CoffeeMachine 4-th stage" />
+    <option name="LAST_COMMIT_MESSAGE" value="CoffeeMachine 4-th stage" />
   </component>
 </project>
