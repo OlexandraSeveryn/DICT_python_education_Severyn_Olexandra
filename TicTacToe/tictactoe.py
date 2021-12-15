@@ -1,4 +1,4 @@
-fill = input("Enter cells:")
+fill = " "*9
 
 def field():
     print ("-"*5)
@@ -38,45 +38,50 @@ def win():
             win_side += diag1[0]
         if diag2.count(diag2[0]) == 3:
             win_side += diag2[0]
-    return win_side.replace("_", "")
+    return win_side.replace(" ", "")
 
 
+side = "x"
 
-field()
+while True:
 
-if abs(fill.count("X")- fill.count("O")) > 1 or len(win())>1:
-    print("Impossible")
-else:
-    if "_" in fill:
-        if len(win()) == 1:
-            print(win() + "wins")
-        else:
-            #print("Game not finished")
+    field()
 
-            while True:
-
-                coord = input("Enter the coordinates:").strip().split("")
-                if len(coord) == 2 and coord [0].isnumeric() and coord [1].isnumeric():
-                    x = int(coord[0]) - 1
-                    y = int(coord[1]) - 1
-                    if 0 <= x <= 2 and 0 <= y <= 2:
-                        if fill[y * 3 + x] == "_":
-                            listEl=list(fill)
-                            listEl[y * 3 + x] = "x"
-                            fill= "".join(listEl)
-                            field()
-                            break
-                        else:
-                            print("This cells is occupied! Choose another one!")
-                    else:
-                        print("Coordinates should be from 1 to 3!")
-                else:
-                    print("You should enter numbers!")
-
-
-
+    if abs(fill.count("X") - fill.count("O")) > 1 or len(win()) > 1:
+        print("Impossible")
     else:
-        if len(win()) == 1:
-            print(win() + " wins")
-        else :
-            print("Draw")
+        if " " in fill:
+            if len(win()) == 1:
+                print(win() + " wins")
+                break
+        else:
+            if len(win()) == 1:
+                print(win() + " wins")
+                break
+            else:
+                print("Draw")
+
+        while True:
+
+            coord = input("Enter the coordinates:").strip().split(" ")
+            if len(coord) == 2 and coord[0].isnumeric() and coord[1].isnumeric():
+                y = int(coord[0]) - 1
+                x = int(coord[1]) - 1
+                if 0 <= x <= 2 and 0 <= y <= 2:
+                    if fill[y * 3 + x] == " ":
+                        listEl = list(fill)
+                        listEl[y * 3 + x] = side
+
+                        if side == "X":
+                            side = "O"
+                        else:
+                            side = "X"
+
+                            fill = "".join(listEl)
+                            break
+                    else:
+                        print("This cell is occupied! Choose another one!")
+                else:
+                        print("Coordinates should be from 1 to 3!")
+            else:
+                        print("You should enter numbers!")
