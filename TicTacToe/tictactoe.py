@@ -1,15 +1,16 @@
 fill = input("Enter cells:")
 
-print ("-"*5)
-for y in range(3):
-    print("|", end="")
-    for x in range(3):
-        print(fill[y*3+x],end="")
-    print("|")
-print ("-"*5)
+def field():
+    print ("-"*5)
+    for y in range(3):
+        print("|", end="")
+        for x in range(3):
+            print(fill[y*3+x], end="")
+        print("|")
+    print ("-"*5)
+
 
 def win():
-
     win_side = ""
 
     for y in range(3):
@@ -37,16 +38,42 @@ def win():
             win_side += diag1[0]
         if diag2.count(diag2[0]) == 3:
             win_side += diag2[0]
-    return win_side
+    return win_side.replace("_", "")
+
+
+
+field()
 
 if abs(fill.count("X")- fill.count("O")) > 1 or len(win())>1:
     print("Impossible")
 else:
     if "_" in fill:
-       if len(win()) == 1:
-           print(win() + " wins")
-       else :
-           print("Game not finished")
+        if len(win()) == 1:
+            print(win() + "wins")
+        else:
+            #print("Game not finished")
+
+            while True:
+
+                coord = input("Enter the coordinates:").strip().split("")
+                if len(coord) == 2 and coord [0].isnumeric() and coord [1].isnumeric():
+                    x = int(coord[0]) - 1
+                    y = int(coord[1]) - 1
+                    if 0 <= x <= 2 and 0 <= y <= 2:
+                        if fill[y * 3 + x] == "_":
+                            listEl=list(fill)
+                            listEl[y * 3 + x] = "x"
+                            fill= "".join(listEl)
+                            field()
+                            break
+                        else:
+                            print("This cells is occupied! Choose another one!")
+                    else:
+                        print("Coordinates should be from 1 to 3!")
+                else:
+                    print("You should enter numbers!")
+
+
 
     else:
         if len(win()) == 1:
