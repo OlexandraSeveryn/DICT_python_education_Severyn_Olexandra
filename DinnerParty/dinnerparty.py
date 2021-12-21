@@ -18,13 +18,24 @@ for i in range(numFriends):
 
 print("Enter the total amount:")
 amount = int(input(">"))
-bill = round(amount/numFriends, 2)
+
 print('Do you want to use the "Who is lucky?" feature? Write Yes/No:')
 lucky = input(">")
+luckyman = ""
 if lucky == "Yes":
     luckyman = random.choice(list(friends.keys()))
     print("{} is the lucky one!".format(luckyman))
+    lucky = 1
+else:
+    print("No one is going to be lucky")
+    lucky = 0
+
+bill = round(amount/(numFriends-lucky), 2)
 
 for key in friends:
-    friends[key] = bill
+    if luckyman != key :
+        friends[key] = bill
+
+print(friends)
+
 
