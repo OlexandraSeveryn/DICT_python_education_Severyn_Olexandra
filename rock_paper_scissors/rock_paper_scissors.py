@@ -1,9 +1,17 @@
+import random
 while True:
-    x = {"paper": "scissors", "rock": "paper", "scissors": "rock"}
-    t = str(input(""))
-    y = x.get(t)
-    if t in x:
-        print(f"Sorry, but the computer chose {y}")
+    x = {"scissors": "paper", "paper": "rock", "rock": "scissors"}
+    pl = str(input(""))
+    cmp = random.choice([*x.keys()])
+    if pl == cmp:
+        print("Draw")
+        continue
+    if pl == x.get(cmp):
+        print(f"Sorry, but the computer chose {cmp}")
+        continue
+    if x.get(pl) == cmp:
+        print(f"Well done. The computer chose {cmp} and failed")
+        continue
     else:
         print("Choose the item!")
         continue
