@@ -25,11 +25,16 @@ if m in slice_player:
     slice_player.remove(m)
 elif m in slice_computer:
     slice_computer.remove(m)
-print(f"Stock pieces {[slice_stock]}")
-print(f"Player pieces {[slice_player]}")
-print(f"Computer pieces {[slice_computer]}")
-print(f"Domino snake {m}")
+print("-" * 70)
+print(f"""Stock pieces {len(slice_stock)}
+Computer pieces {len(slice_computer)}
+{m}
+Your pieces:
+    """)
+for i, item in enumerate(slice_player):
+    print(f"{i + 1}: {item}")
+print("")
 if len(slice_computer) > len(slice_player):
-    print("Status: Computer")
-elif len(slice_player) > len(slice_computer):
-    print("Status: Player")
+    print("Status: Computer is about to make a move. Press Enter to continue...")
+elif len(slice_computer) < len(slice_player):
+    input("Status: It's your turn to make a move. Enter your command. ")
