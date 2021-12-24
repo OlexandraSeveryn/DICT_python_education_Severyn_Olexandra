@@ -1,4 +1,5 @@
 import random
+from collections import Counter
 
 domino_pieces = [[x, y] for x in range(0, 7) for y in range(0, 7) if x >= y]
 random.shuffle(domino_pieces)
@@ -97,6 +98,28 @@ def player_input():
         else:
             print("Incorrect input. Enter number ")
             continue
+
+
+def logic():
+    a = []
+    for j in list(slice_computer):
+        for x in j:
+            a += [x]
+    b = []
+    for j in list(tier_list):
+        for x in j:
+            b += [x]
+    result = dict(Counter(a + b))
+    new_dict = []
+    for x, j in slice_computer:
+        num = result.get(x) + result.get(j)
+        new_dict.append([[x, j], num])
+    sorted(new_dict, key=lambda y: y[1], reverse=True)
+    slice_computer.clear()
+    for x in new_dict:
+        slice_computer.append(x[0])
+    print(slice_computer)
+    return slice_compute
 
 
 def computer_input():
