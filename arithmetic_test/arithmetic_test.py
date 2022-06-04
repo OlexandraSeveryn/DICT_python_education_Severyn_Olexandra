@@ -17,17 +17,26 @@ def checking():
 
 
 def proverka():
-    answer = checking()
-    user_input = int(input('Write your answer: '))
-    return user_input == answer
+    while True:
+        try:
+            answer = checking()
+            user_input = int(input('Write your answer: '))
+            return user_input == answer
+        except:
+            print('Incorrect input!')
 
 
 def output():
-    correct = proverka()
-    if correct:
-        print("Right!")
-    else:
-        print("Wrong!")
+    mark = 0
+    for i in range(5):
+        correct = proverka()
+        if correct:
+            mark += 1
+            print("Right!")
+        else:
+            print("Wrong!")
+
+    print('Your mark is {}/5'.format(mark))
 
 
 output()
