@@ -1,4 +1,6 @@
 print('Special commands: !help !done')
+print('-' * 29)
+
 formatts = 'Available formatters: plain, bold, italic, header, link, inline-code,' \
            ' ordered-list, unordered-list, new-line.'
 formatters = ['plain', 'bold', 'italic', 'header', 'link', 'inline-code', 'ordered-list', 'unordered-list', 'new-line']
@@ -33,16 +35,6 @@ def available_formatters():
         m_down.append(users_text)
         print()
 
-    elif choose == formatters[6]:       # ordered-list
-        users_text = input('Text: ')
-        m_down.append(users_text)
-        print()
-
-    elif choose == formatters[7]:       # unordered-list
-        users_text = input('Text: ')
-        m_down.append(users_text)
-        print()
-
     elif choose == formatters[8]:       # new-line
         users_text = input('Text: ')
         m_down.append(users_text)
@@ -60,6 +52,30 @@ def available_formatters():
         except ValueError:
             print('The level should be within the range of 1 to 6. Try again!')
 
+    # ordered and unordered lists
+
+    elif choose == formatters[6]:       # ordered-list
+        num_of_rows = int(input('Number of rows:'))
+        try:
+            if num_of_rows > 0:
+                for n in range(1, num_of_rows + 1):
+                    users_text = input(f'Row #{n}:')
+                    m_down.append(users_text)
+                    print(f'#{users_text}')
+        except ValueError:
+            print('The number of rows should be greater than zero.')
+
+    elif choose == formatters[7]:       # unordered-list
+        num_of_rows = int(input('Number of rows:'))
+        try:
+            if num_of_rows > 0:
+                for n in range(1, num_of_rows + 1):
+                    users_text = input(f'Row #{n}:')
+                    m_down.append(users_text)
+                    print(f'*{users_text}')
+        except ValueError:
+            print('The number of rows should be greater than zero.')
+
 
 while choose != 'done':
     choose = input('Choose a formatter:')
@@ -69,3 +85,8 @@ while choose != 'done':
         break
     else:
         available_formatters()
+
+
+if choose == 'done':
+    saving = open('output.md', "w")
+    saving.write(f'''{''.join(m_down)}''')
